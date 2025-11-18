@@ -12,7 +12,56 @@ A Python notebook project for running evaluations on datasets to compare two AI 
 
 ### Installation
 
+#### Option 1: Automated Setup (Recommended for macOS/Linux)
+
 1. **Clone the repository** (if you haven't already):
+   ```bash
+   git clone https://github.com/SamuelTassell/langsmith-model-version-eval.git
+   cd langsmith-model-version-eval
+   ```
+
+2. **Run the setup script**:
+   ```bash
+   ./setup.sh
+   ```
+   
+   This script will:
+   - Create a virtual environment
+   - Install all dependencies
+   - Create a .env file from the template
+
+3. **Configure your API keys**:
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env
+3. **Configure your API keys**:
+   ```bash
+   # Edit .env with your actual API keys
+   nano .env
+   ```
+
+   Required API keys:
+   - `LANGCHAIN_API_KEY`: Your LangSmith API key (get it from [LangSmith](https://smith.langchain.com/))
+   - `OPENAI_API_KEY`: Your OpenAI API key (get it from [OpenAI](https://platform.openai.com/))
+
+4. **Launch Jupyter Notebook**:
+   ```bash
+   source venv/bin/activate  # Activate virtual environment
+   jupyter notebook
+   ```
+   
+   Or use JupyterLab for a more modern interface:
+   ```bash
+   jupyter lab
+   ```
+
+5. **Open and run the example notebook**:
+   - Navigate to `notebooks/model_evaluation.ipynb`
+   - Run the cells sequentially to see the evaluation in action
+
+#### Option 2: Manual Setup (All Platforms)
+
+1. **Clone the repository**:
    ```bash
    git clone https://github.com/SamuelTassell/langsmith-model-version-eval.git
    cd langsmith-model-version-eval
@@ -41,27 +90,13 @@ A Python notebook project for running evaluations on datasets to compare two AI 
    cp .env.example .env
    
    # Edit .env with your actual API keys
-   # You can use nano, vim, or any text editor
    nano .env
    ```
 
-   Required API keys:
-   - `LANGCHAIN_API_KEY`: Your LangSmith API key (get it from [LangSmith](https://smith.langchain.com/))
-   - `OPENAI_API_KEY`: Your OpenAI API key (get it from [OpenAI](https://platform.openai.com/))
-
-5. **Launch Jupyter Notebook**:
+5. **Launch Jupyter and start working**:
    ```bash
    jupyter notebook
    ```
-   
-   Or use JupyterLab for a more modern interface:
-   ```bash
-   jupyter lab
-   ```
-
-6. **Open and run the example notebook**:
-   - Navigate to `notebooks/model_evaluation.ipynb`
-   - Run the cells sequentially to see the evaluation in action
 
 ## 📁 Project Structure
 
