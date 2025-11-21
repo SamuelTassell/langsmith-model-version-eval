@@ -21,3 +21,7 @@ requests>=2.31.0
 
 # OpenAI (for model evaluation)
 openai>=1.0.0
+
+# Vertex AI
+langchain-google-vertexai>=0.0.1
+google-cloud-aiplatform>=1.38.0
